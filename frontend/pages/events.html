@@ -16,6 +16,69 @@
         <a href="events.html">Training Events</a>
         <a href="registration.html">Registration</a>
     </nav>
+    <main>
+        <h2>Training Events</h2>
+        <form>
+
+            <h3>Add New Training Event</h3>
+
+            <label>Event Title</label>
+            <input type="text" id="evTitle" placeholder="e.g. Offshore Safety Induction">
+            <br>
+            <label>HSE Category</label>
+            <select id="evCategory">
+                <option value="">-- Select Category --</option>
+                <option value="Fire Safety">Fire Safety</option>
+                <option value="Offshore Survival">Offshore Survival</option>
+                <option value="First Aid">First Aid</option>
+                <option value="Chemical Handling">Chemical Handling</option>
+                <option value="Emergency Response">Emergency Response</option>
+                <option value="Manual Handling">Manual Handling</option>
+                <option value="Working at Heights">Working at Heights</option>
+            </select>
+            <br>
+            <label>Event Date</label>
+            <input type="date" id="evDate">
+            <br>
+            <label>Location</label>
+            <input type="text" id="evLocation" placeholder="e.g. Aberdeen Training Centre">
+            <br>
+            <label>Max Capacity</label>
+            <input type="number" id="evCapacity" placeholder="e.g. 20">
+            <br>
+            <label>Description</label>
+            <textarea id="evDescription" placeholder="Description of this Training"
+
+            <button type="button" onclick="saveEvent()">Save Event</button>
+            <button type="button" onclick="clearForm()">Clear</button>
+
+            </form>
+        <!-- TABLE — Shows all events -->
+        <h3>All Training Events</h3>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Event Title</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Capacity</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+
+
+
+
+
+
+
     
 </body>
 </html>
