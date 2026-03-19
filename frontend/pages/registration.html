@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrations — Petrofac HSE</title>
+</head>
+<body>
+     <header>
+        <img src="images/Logo-Petrofac.jpg" alt="Petrofac Logo">
+        <h1>Petrofac HSE Training Tracker</h1>
+        <p>Admin Portal</p>
+    </header>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="events.html">Training Events</a>
+        <a href="registration.html">Registration</a>
+    </nav>
+    <main>
+
+        <h2>Registrations</h2>
+        <form>
+
+            <h3>Register Employee to Training Event</h3>
+
+            <label>Employee Full Name</label>
+            <input type="text" id="regName" placeholder="Employee name">
+
+            <label>Employee ID</label>
+            <input type="text" id="regEmpId" placeholder="e.g. PF-10421">
+
+            <label>Department</label>
+            <select id="regDept">
+                <option value="">-- Select Department --</option>
+                <option value="Offshore Operations">Offshore Operations</option>
+                <option value="HSE Department">HSE Department</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Administration">Administration</option>
+                <option value="Finance">Finance</option>
+                <option value="IT">IT</option>
+            </select>
+
+            <label>Attendance Status</label>
+            <select id="AttenStat">
+                <option value="">-- Select Event --</option>
+                <option value="Pending">Pending</option>
+                <option value="Attended">Attended</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <button type="button" onclick="saveRegistration()">Register Employee</button>
+            <button type="button" onclick="clearForm()">Clear</button>
+
+        </form>
+        <h3>All Registrations</h3>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Employee Name</th>
+                    <th>Employee ID</th>
+                    <th>Department</th>
+                    <th>Training Event</th>
+                    <th>Date Registered</th>
+                    <th>Attendance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="regsTableBody">
+            </tbody>
+        </table>
+
+    </main>
+
+    
+</body>
+</html>
