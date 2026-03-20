@@ -9,11 +9,13 @@
      <header>
         <h1>Petrofac HSE Training Tracker</h1>
         <p>Admin Portal</p>
-    </header>
+        <hr>
+    </header>   
     <nav>
         <a href="../index.html">Dashboard</a>
         <a href="events.html">Training Events</a>
         <a href="registration.html">Registration</a>
+        <hr>
     </nav>
     <main>
         <h2>Training Events</h2>
@@ -53,7 +55,8 @@
             <button type="button" onclick="clearForm()">Clear</button>
 
             </form>
-        <!-- TABLE — Shows all events -->
+            <hr>
+        
         <h3>All Training Events</h3>
 
         <table border="1">
@@ -74,7 +77,33 @@
         </table>
     
     </main>
+    <script>
+    let events = [];
 
-    
+    function getStatus(date) {
+        let today     = new Date();
+        let eventDate = new Date(date);
+        if (eventDate < today) {
+            return 'Completed';
+        } else {
+            return 'Upcoming';
+        }
+    }
+    function saveEvent() {
+        let title    = document.getElementById('evTitle').value;
+        let category = document.getElementById('evCategory').value;
+        let date     = document.getElementById('evDate').value;
+        let location = document.getElementById('evLocation').value;
+        let capacity = document.getElementById('evCapacity').value; 
+  
+  
+  
+  
+  
+  
+  
+    }
+
+    </script>
 </body>
 </html>
